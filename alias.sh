@@ -1,4 +1,4 @@
-# Parenting changing perms on / #
+# changing permissions
 alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
