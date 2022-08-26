@@ -48,8 +48,8 @@ alias cdd='\cd $Universal_home/Downloads'
 alias cdn="\cd $NOTES_DIR"
 alias cdp="\cd $PROJECTS_DIRECTORY"
 
-alias p='cd "$PROJECT_DIRECTORY_CURRENT"'
-alias cdpa='cd "$PROJECT_DIRECTORY_CURRENT"'
+alias p='\cd "$PROJECT_DIRECTORY_CURRENT"'
+alias cdpa='\cd "$PROJECT_DIRECTORY_CURRENT"'
 alias cdpb='\cd "$PROJECT_DIRECTORY_CURRENT2"'
 alias cdpc='\cd "$PROJECT_DIRECTORY_CURRENT3"'
 alias cdpd='\cd "$PROJECT_DIRECTORY_CURRENT4"'
