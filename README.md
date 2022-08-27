@@ -1,7 +1,8 @@
 # dotfiles
-Collection of command line tools and configs
+This is a stripped down version of **Collection of command line tools and configs** taken from my personal repository
 
 https://medium.com/@cibin.mathew/my-terminal-and-development-setup-e99f5baf2b18
+
 
 ### Alias
 [alias](alias.sh)
