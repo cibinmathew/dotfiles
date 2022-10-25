@@ -1,3 +1,5 @@
+# https://github.com/junegunn/fzf/wiki/Examples#git
+
 # fco_preview - checkout git branch/tag, with a preview showing the commits between the tag/branch and HEAD
 fco_preview() {
   # https://github.com/junegunn/fzf/wiki/Examples
