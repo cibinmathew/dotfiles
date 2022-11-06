@@ -11,3 +11,8 @@ Read about **[alias](alias.sh)**
 
 
 ### Read about [fco_preview](fco_preview.sh) on [Medium](https://medium.com/@cibin.mathew/fzf-trick-to-do-git-checkout-bdde2364f758)
+
+
+## Chrome extensions
+- [Surfingkeys](https://github.com/brookhong/Surfingkeys/)
+- [cycle-last-used-tabs](https://chrome.google.com/webstore/detail/clut-cycle-last-used-tabs/cobieddmkhhnbeldhncnfcgcaccmehgn?hl=en)
