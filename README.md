@@ -11,5 +11,5 @@ https://medium.com/@cibin.mathew/my-terminal-and-development-setup-e99f5baf2b18
 
 
 ## Chrome extensions
-- [Surfingkeys](https://github.com/brookhong/Surfingkeys/)
+- [Surfingkeys](https://github.com/brookhong/Surfingkeys/) Rich shortcuts to click links/switch tabs/scroll, capture pages, use your browser like `vim` for productivity.
 - [cycle-last-used-tabs](https://chrome.google.com/webstore/detail/clut-cycle-last-used-tabs/cobieddmkhhnbeldhncnfcgcaccmehgn?hl=en)
