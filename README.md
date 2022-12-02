@@ -1,5 +1,5 @@
 # dotfiles
-This is a very minimal version of **Collection of command line tools and configs** taken from my personal repository. This is still *Work in progress*
+This is a very minimal version of **Collection of command line tools and configs** taken from [my personal dotfiles repository](https://github.com/cibinmathew/my-dotfiles). This is still *work in progress*
 
 
 ## Article links
