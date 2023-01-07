@@ -26,7 +26,7 @@ git clone --depth 1 https://github.com/laggardkernel/ranger-fzf-marks.git ~/.con
 git clone --depth 1 https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 git clone --depth 1 git@github.com:joouha/ranger_tmux.git ~/.config/ranger/plugins/ranger_tmux
 pip install trash-cli    
-```
+
 
 if [[ "$OSTYPE" == darwin* ]]; then
     # macOS:
@@ -39,3 +39,5 @@ else
     apt install caca-utils highlight atool w3m w3m-img poppler-utils mediainfo
     # On archlinux, the package is called "w3m", on debian it is "w3m-img"
 fi
+
+```
