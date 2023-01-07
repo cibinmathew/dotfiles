@@ -1,0 +1,1 @@
+/Users/cibin/Library/Python/3.8/lib/python/site-packages/ranger_tmux/plugin.py
