@@ -1,9 +1,9 @@
 # dotfiles
-This is a very minimal version of **Collection of command line tools and configs** taken from [my personal dotfiles repository](https://github.com/cibinmathew/my-dotfiles). This is still *work in progress*
+This is a very minimal version of **Collection of command line tools and configs** taken from [my personal dotfiles repository](https://github.com/cibinmathew/my-dotfiles). This effort is still `work in progress`
 
 
-## Article links
-https://medium.com/@cibin.mathew/my-terminal-and-development-setup-e99f5baf2b18
+## Links
+[medium.com](https://medium.com/@cibin.mathew/my-terminal-and-development-setup-e99f5baf2b18)
 
 [collection of alias](alias.sh)
 
