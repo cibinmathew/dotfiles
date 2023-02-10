@@ -1,7 +1,7 @@
 #!/bin/bash -e
 # https://github.com/aws/aws-encryption-sdk-python/blob/master/.github/workflows/ci_static-analysis.yaml
 
-source "$HOME"/my-files/my-scripts/colors.sh
+source "$HOME"/my-scripts/colors.sh
 
 
 echo -e "${CYAN}usage: checkallmissed file1 file2${NC}"

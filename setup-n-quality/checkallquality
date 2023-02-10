@@ -1,5 +1,5 @@
 #!/bin/bash -ex
-source "$HOME"/my-files/my-scripts/colors.sh
+source "$HOME"/my-scripts/colors.sh
 
 echo -e "${CYAN}usage: checkallmissed file1 file2${NC}"
 echo -e "${PURPLE}checking all todos, breakpoints....${NC}"

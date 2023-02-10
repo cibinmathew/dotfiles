@@ -1,5 +1,5 @@
 #!/bin/bash -e
-source "$HOME"/my-files/my-scripts/colors.sh
+source "$HOME"/my-scripts/colors.sh
 
 
 "$HOME"/my-files/my-scripts/setup-n-quality/checkalllint

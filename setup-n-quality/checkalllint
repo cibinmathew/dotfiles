@@ -1,5 +1,5 @@
 #!/bin/bash -e
-source "$HOME"/my-files/my-scripts/colors.sh
+source "$HOME"/my-scripts/colors.sh
 
 # TODO move the checks and diff to other script. Only keep the in-place reformats here
 
