@@ -1,10 +1,12 @@
 ## Features
-`checkalllint` : checks `black` and `isort`
+- `checkalllint` : checks `black` and `isort`
 
-`checkallmissed` : TODO
+- `checkallmissed` : TODO
 
-`checkallquality` : TODO
+- `checkallquality` : checks `pylint`, `prospector`, `flake8`, `bandit`
 
-`fixalllint` : TODO
+    Read about [Static analysis tools](https://luminousmen.com/post/python-static-analysis-tools)
 
-`tfprojinit` : TODO
+- `fixalllint` : TODO
+
+- `tfprojinit` : TODO
