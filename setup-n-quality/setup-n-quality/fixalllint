@@ -1,0 +1,39 @@
+#!/bin/bash -e
+source "$HOME"/my-files/my-scripts/colors.sh
+
+
+"$HOME"/my-files/my-scripts/setup-n-quality/checkalllint
+
+# example usage
+prompt_confirm "Overwrite File?" || exit 0
+
+# order: isort, , autopep8,  black yapf
+echo -e "${PURPLE}\nfixing isorts....${NC}"
+isort --profile black **/*.py  # recursively # TODO not working??
+# isort --recursive # works????
+# to skip fix on certain lines:
+#   eg: import module  # isort:skip
+
+# TODO?? -r, --recursive       run recursively over directories
+
+# Todo later: run autopep8 with aggresive mode(dangerous)
+
+echo -e "${PURPLE}\nfixing autoflake....${NC}"
+autoflake --exclude=__init__.py \
+    --in-place \
+    --remove-unused-variables \
+    --recursive \
+    --remove-all-unused-imports . # **/*.py 
+
+echo -e "${PURPLE}\nfixing autopep8 --in-place --aggressive --aggressive ${NC}"
+autopep8 --in-place --aggressive --aggressive  **/*.py 
+echo -e "${PURPLE}\nfixing black....${NC}"
+black --required-version 21.9b0 .  # recursive
+# find . -name \*\.py |xargs black --check
+
+
+# # todo: first run yapf, then run black or facebook seems better than google and black
+# yapf -i --style yapf --verbose **/*.py
+# yapf -i --style google --verbose **/*.py
+# yapf -i --style pep8 --verbose **/*.py
+# yapf -i --style facebook --verbose **/*.py

@@ -1,0 +1,14 @@
+#!/bin/bash -e
+source "$HOME"/my-files/my-scripts/colors.sh
+
+# TODO move the checks and diff to other script. Only keep the in-place reformats here
+
+echo -e "${CYAN}Running checkalllint\n${GREEN}usage: checkallmissed file1 file2${NC}"
+echo -e "${PURPLE}\nchecking all todos, breakpoints....${NC}"
+
+# black --required-version 21.9b0 --diff **/*.py
+black --diff .
+echo -e "${PURPLE}\nchecking isorts....${NC}"
+isort --diff --color --profile black **/*.py  # recursively
+# black --required-version 21.9b0 --check **/*.py
+    

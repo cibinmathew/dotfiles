@@ -1,0 +1,34 @@
+#!/bin/bash -ex
+source "$HOME"/my-files/my-scripts/colors.sh
+
+echo -e "${CYAN}usage: checkallmissed file1 file2${NC}"
+echo -e "${PURPLE}checking all todos, breakpoints....${NC}"
+
+# TODO https://towardsdatascience.com/static-code-analysis-for-python-bdce10b8d287
+
+# run first less noisy ones
+# when running first time: prospector -> pylint-> mypy ????
+# when running after a patch: pylint-> mypy
+mkdir -p reports
+# Additional checks?
+
+pylint --disable=all --enable=duplicate-code **/*.py > reports/pylint-duplication-report.txt
+pylint  **/*.py > reports/pylint-report.txt  # more aggressive
+echo "checking mypy"
+mypy **/*.py > reports/mypy-report.txt
+
+prospector  > reports/prospector-report.txt  # default
+# prospector --strictness high
+# prospector --profile /path/to/your/profile.yaml
+
+
+flake8  > reports/flake8-report.txt  # default
+#flake8 path/to/code/to/specificfile.py
+#flake8 path/to/project/
+#flake8 path/to/code/ --ignore E24,W501   # E501: line length
+
+# get runtime using bandit
+bandit -r -l .  > reports/bandit-report.txt  #  bandit -r -l <path>
+## use these flags: -l=level low, -ll=level medium -lll=high
+
+# get dead code https://github.com/jendrikseipp/vulture

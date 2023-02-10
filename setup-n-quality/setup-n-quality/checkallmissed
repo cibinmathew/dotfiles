@@ -1,0 +1,37 @@
+#!/bin/bash -e
+# https://github.com/aws/aws-encryption-sdk-python/blob/master/.github/workflows/ci_static-analysis.yaml
+
+source "$HOME"/my-files/my-scripts/colors.sh
+
+
+echo -e "${CYAN}usage: checkallmissed file1 file2${NC}"
+
+todo_str="TODO|FIXME|breakpoint|print"
+
+echo -e "${RED}checking all todos, breakpoints....${NC}"
+grep --color=auto -iE "$todo_str" "$@"
+grep --color=auto -i todo "$@"
+
+git diff origin/master |delta -s | grep -i -C 1  -iE "$todo_str"
+# git diff origin/master|delta -s |grep -i -C2 print
+
+
+
+echo -e "${PURPLE}checking all todos, breakpoints....${NC}"
+git diff origin/master -U1 |grep -i -A 2 todo
+# -U ( context lines)
+
+# git grep -i todo origin/master
+# todo
+# print
+# breakpoint
+# cbn
+
+git grep --color=auto -liE "$todo_str" | xargs -n1 git blame | grep $(git config user.email) # | grep TODO
+# better use email if username has spaces
+
+
+# TODOs
+# [AKIA[[:alnum:]]{14}, --] # matches AWS keys
+
+git diff | noglob \grep --color=always -i -nC 1  -iE "todo"|less -R ; git  diff --name-only ; git diff |delta -s

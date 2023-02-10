@@ -1,0 +1,69 @@
+#!/bin/bash -e
+
+#################
+# tf project init or rename to 'tfhelloworld'
+#################
+
+
+# TODOs
+# - add terraform dockerfile
+# - copy /Users/cibin/Downloads/my-vault/personal-conflict-confidential/Projects/boilerplate_projects/aws-lambda-pipelines-tf-sam-serverless-CICD/tf/env/localstack/provider-localstack.tf
+
+
+source "$HOME"/my-files/my-scripts/colors.sh
+if [ -f "init.tf" ]; 
+then
+    echo "init.tf exists. Not overwriting"
+else
+
+    echo "writing init.tf"
+printf '
+
+
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.50"
+    }
+  }
+}
+
+provider "aws" {
+  profile = "default"
+  region  = "us-east-1"
+}
+
+# localstack
+# provider "aws" {
+#   region                      = "ap-southeast-2"
+#   access_key                  = "fake"
+#   secret_key                  = "fake"
+#   skip_credentials_validation = true
+#   skip_metadata_api_check     = true
+#   skip_requesting_account_id  = true
+
+#   endpoints {
+#     dynamodb = "http://localhost:4566"
+#     lambda   = "http://localhost:4566"
+#     iam  = "http://localhost:4566"
+#   }
+# }
+' > init.tf
+
+fi
+# ---------------------------
+if [ -f "variables.tf" ]; 
+then
+    echo "variables.tf exists. Not overwriting"
+else
+    echo "writing variables.tf"
+
+printf '
+variable "name" {
+    default = ""
+}
+' > variables.tf
+fi
+touch main.tf
+
