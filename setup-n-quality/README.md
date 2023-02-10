@@ -1,4 +1,7 @@
-## Features
+# Setup and quality checking utilities
+
+## Python
+
 - `checkalllint` : checks `black` and `isort`
 
 - `checkallmissed` : TODO
@@ -9,4 +12,9 @@
 
 - `fixalllint` : TODO
 
+
+## Terraform
 - `tfprojinit` : TODO
+
+## Bash
+TODO
